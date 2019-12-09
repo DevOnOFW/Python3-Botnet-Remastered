@@ -203,7 +203,7 @@ def main():
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
 	s.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)#Keepalive tcp connection
-	s.bind(('0.0.0.0',b))
+	s.bind(('127.0.0.1',b))
 	s.listen(1024)
 	while True:
 		sock, addr = s.accept()
